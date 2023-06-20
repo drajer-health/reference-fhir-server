@@ -1,0 +1,27 @@
+{
+	"totalCount": 2,
+	"dataSet": [
+		{
+			"auditId": "D75B52D76CC34103B560E44AA396B8E0",
+			"actualRequestTime": "2022-05-18 12:42:53.571",
+			"requestUrl": "http://localhost:8089/fhir/r4/1005/CarePlan",
+			"practiceId": 1005,
+			"requestEndTime": "2022-05-18 12:42:53.571",
+			"methodName": "search",
+			"resourceType": "CarePlan",
+			"auditDate": "2022-05-12",
+			"requestStartTime": "2022-05-18 12:38:53.571"
+		},
+		{
+			"auditId": "43E411826B734EF498EF09A281875F48",
+			"actualRequestTime": "2022-05-18 12:42:53.571",
+			"requestUrl": "http://localhost:8089/fhir/r4/1005/CarePlan",
+			"practiceId": 1005,
+			"requestEndTime": "2022-05-18 12:42:53.571",
+			"methodName": "search",
+			"resourceType": "CarePlan",
+			"auditDate": "2022-05-12",
+			"requestStartTime": "2022-05-18 12:40:53.571"
+		}
+	]
+}

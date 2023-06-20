@@ -1,0 +1,165 @@
+{
+"resourceType": "Bundle",
+  "id": "c28d98b5-66d7-4f72-8a3d-74034a65aaaa",
+  "type": "searchset",
+  "total": 2,
+  "entry": [ {
+    "fullUrl": "http://localhost:8089/fhir/r4/1005/Medication/9_9989_89",
+    "resource": {
+      "resourceType": "Medication",
+      "id": "9_9989_89",
+      "meta": {
+        "lastUpdated": "2021-01-07T20:46:48.000+05:30",
+        "profile": [ "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication" ]
+      },
+      "code": {
+        "coding": [ {
+          "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+          "code": "10760",
+          "display": "Triamcinolone Oral Paste"
+        } ],
+        "text": "Triamcinolone Oral Paste"
+      },
+      "status": "active",
+      "manufacturer": {
+        "reference": "Organization/8080"
+      },
+      "form": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "7946007",
+          "display": "Drug suspension"
+        } ],
+        "text": "Drug suspension"
+      },
+      "batch": {
+        "lotNumber": "3823782",
+        "expirationDate": "2021-01-07T20:46:48+05:30"
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "http://localhost:8089/fhir/r4/1005/Provenance/MD-9_9989_89",
+    "resource": {
+      "resourceType": "Provenance",
+      "id": "MD-9_9989_89",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance" ]
+      },
+      "target": [ {
+        "reference": "Medication/9_9989_89"
+      } ],
+      "recorded": "2021-01-07T20:46:48.000+05:30",
+      "agent": [ {
+        "who": {
+          "reference": "Organization/8080"
+        }
+      }, {
+        "type": {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+            "code": "author",
+            "display": "Author"
+          } ]
+        }
+      } ]
+    },
+    "search": {
+      "mode": "include"
+    }
+  }, {
+    "fullUrl": "http://localhost:8089/fhir/r4/1005/Medication/9_9989_90",
+    "resource": {
+      "resourceType": "Medication",
+      "id": "9_9989_90",
+      "meta": {
+        "lastUpdated": "2021-01-07T20:46:48.000+05:30",
+        "profile": [ "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication" ]
+      },
+      "code": {
+        "coding": [ {
+          "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+          "code": "25406",
+          "display": "Nitrofurazone Topical Cream [Furacin]"
+        } ],
+        "text": "Nitrofurazone Topical Cream [Furacin]"
+      },
+      "status": "active",
+      "manufacturer": {
+        "reference": "Organization/8090"
+      },
+      "form": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "11190007",
+          "display": "Drug stick"
+        } ],
+        "text": "Drug stick"
+      },
+      "batch": {
+        "lotNumber": "382377782",
+        "expirationDate": "2021-01-07T22:26:48+05:30"
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "http://localhost:8089/fhir/r4/1005/Provenance/MD-9_9989_90",
+    "resource": {
+      "resourceType": "Provenance",
+      "id": "MD-9_9989_90",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance" ]
+      },
+      "target": [ {
+        "reference": "Medication/9_9989_90"
+      } ],
+      "recorded": "2021-01-07T20:46:48.000+05:30",
+      "agent": [ {
+        "who": {
+          "reference": "Organization/8090"
+        }
+      }, {
+        "type": {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+            "code": "author",
+            "display": "Author"
+          } ]
+        }
+      } ]
+    },
+    "search": {
+      "mode": "include"
+    }
+  }, {
+    "resource": {
+      "resourceType": "Parameters",
+      "id": "8ce8f20f-a1b3-40f6-a97d-f274e0cd026e",
+      "parameter": [ {
+        "name": "resourceType",
+        "valueString": "Medication"
+      }, {
+        "name": "requestId",
+        "valueString": "9ba319c8-b74a-4a95-8663-d79deda27bee"
+      }, {
+        "name": "endpointUrl",
+        "valueString": "http://localhost:8089/fhir/r4/1005"
+      }, {
+        "name": "practiceId",
+        "valueString": "1005"
+      }, {
+        "name": "code",
+        "valueCodeableConcept": {
+          "coding": [ {
+            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code": "25406"
+          } ]
+        }
+      } ]
+    }
+  } ]
+}

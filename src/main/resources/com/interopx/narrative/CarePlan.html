@@ -1,0 +1,47 @@
+<!--/* 
+This top section is not exported as a part of the Narrative,
+it is only present so that this template can be viewed in 
+a browser. 
+-->
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="narrative.css"/>
+	</head>
+	<body>
+<!--*/-->
+
+<div>
+	<table border="1">
+		<tbody>
+			<tr th:if="${not resource.statusElement.empty}">
+				<td>Status</td>
+				<td><span th:text="${resource.status}"></span></td>
+				</tr>
+			<tr th:if="${not resource.intentElement.empty}">
+				<td>Intent</td>
+				<td><span th:text="${resource.intent}"></span></td>
+				</tr>			
+			<tr th:if="${not resource.category.empty} AND ${not resource.category[0].coding.empty} AND ${resource.category[0].coding[0].code!=null}">
+				<td>Category Code</td>
+				<td><span th:text="${resource.category[0].coding[0].code}"></span></td>
+			</tr>
+			<span th:with="expr_result = ${not resource.category.empty} AND ${not resource.category[0].coding.empty} AND ${resource.category[0].coding[0].display!=null}">
+			<tr	th:if="${expr_result}">
+				<td>Category</td>
+				<td><span th:text="${resource.category[0].coding[0].display}"></span></td>
+			</tr>
+			<tr	th:unless="${expr_result}">
+			<span if="${not resource.category.empty}">
+				<td>Category</td>
+				<td><span th:text="${resource.category[0].text}"></span></td>
+				</span>
+			</tr>
+			</span>
+		</tbody>
+	</table>
+</div>
+
+<!--/*-->
+	</body>
+</html>
+<!--*/-->

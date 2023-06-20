@@ -1,0 +1,102 @@
+{
+	"resourceType": "Bundle",
+	"id": "c3994d2a-a8da-430b-ad9b-d2bfdfa76e09",
+	"entry": [
+		{
+			"fullUrl": "/AllergyIntolerance/4367",
+			"resource": {
+				"resourceType": "AllergyIntolerance",
+				"id": "4367",
+				"meta": {
+					"lastUpdated": "2021-01-07T20:46:48.000+05:30",
+					"profile": [
+						"http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance"
+					]
+				},
+				"identifier": [
+					{
+						"system": "http://nationalhealthcareprovider.org/mrn",
+						"value": "MRN-12345"
+					}
+				],
+				"clinicalStatus": {
+					"text": "active"
+				},
+				"verificationStatus": {
+					"text": "confirmed"
+				},
+				"category": [
+					"food"
+				],
+				"criticality": "low",
+				"code": {
+					"coding": [
+						{
+							"system": "http://snomed.info/sct",
+							"code": "227151004",
+							"display": "Prawns (substance)"
+						}
+					],
+					"text": "Prawns (substance)"
+				},
+				"patient": {
+					"reference": "Patient/Patient/356"
+				},
+				"encounter": {
+					"reference": "Encounter/Encounter/356"
+				},
+				"lastOccurrence": "2021-01-07T20:46:48+05:30",
+				"note": [
+					{
+						"text": "Everything went well"
+					}
+				],
+				"reaction": [
+					{
+						"manifestation": [
+							{
+								"coding": [
+									{
+										"system": "http://snomed.info/sct",
+										"code": "39579001",
+										"display": "Anaphylactic reaction"
+									}
+								],
+								"text": "Anaphylactic reaction"
+							}
+						],
+						"onset": "2021-01-07T20:46:48+05:30",
+						"severity": "mild"
+					}
+				]
+			},
+			"search": {
+				"mode": "match"
+			}
+		},
+		{
+			"resource": {
+				"resourceType": "Parameters",
+				"id": "283ad6b8-193d-4649-a936-b3f42d61227e",
+				"parameter": [
+					{
+						"name": "resourceType",
+						"valueString": "AllergyIntolerance"
+					},
+					{
+						"name": "requestId",
+						"valueString": "0d2aa10c-a0f5-4b45-a249-3db68e7632fe"
+					},
+					{
+						"name": "practiceId",
+						"valueString": "1005"
+					},
+					{
+						"name": "readById",
+						"valueString": "123"
+					}
+				]
+			}
+		}
+	]
+}

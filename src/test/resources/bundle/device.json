@@ -1,0 +1,123 @@
+{
+"resourceType": "Bundle",
+  "id": "60865544-4187-49fc-a6d2-f060dab94221",
+  "type": "searchset",
+  "total": 3,
+  "entry": [ {
+    "fullUrl": "http://localhost:8089/fhir/r4/1005/Device/7888",
+    "resource": {
+      "resourceType": "Device",
+      "id": "7888",
+      "meta": {
+        "lastUpdated": "2021-01-07T20:46:48.000+05:30",
+        "profile": [ "http://hl7.org/fhir/us/core/StructureDefinition/us-core-implantable-device" ]
+      },
+      "udiCarrier": [ {
+        "deviceIdentifier": "39479456078965",
+        "carrierHRF": "(01)39479456078965(11)700623(17)950708(10)10884308307291874(21)33951957783598776"
+      } ],
+      "distinctIdentifier": "39479456078965",
+      "manufactureDate": "2007-11-03T15:30:00+05:30",
+      "expirationDate": "2007-11-03T15:30:00+05:30",
+      "lotNumber": "10884308307291874",
+      "serialNumber": "33951957783598776",
+      "type": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "72506001",
+          "display": "Implantable defibrillator, device (physical object)"
+        } ],
+        "text": "Implantable defibrillator, device (physical object)"
+      },
+      "parent": {
+        "reference": "Patient/Patient/4644"
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "http://localhost:8089/fhir/r4/1005/Provenance/DEV-7888",
+    "resource": {
+      "resourceType": "Provenance",
+      "id": "DEV-7888",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance" ]
+      },
+      "target": [ {
+        "reference": "Device/7888"
+      } ],
+      "recorded": "2021-01-07T20:46:48.000+05:30",
+      "agent": [ {
+        "type": {
+          "coding": [ {
+            "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-provenance-participant-type",
+            "code": "transmitter",
+            "display": "Transmitter"
+          } ]
+        },
+        "who": {
+          "reference": "Organization/001"
+        }
+      } ]
+    },
+    "search": {
+      "mode": "include"
+    }
+  }, {
+    "fullUrl": "http://localhost:8089/fhir/r4/1005/Device/7889",
+    "resource": {
+      "resourceType": "Device",
+      "id": "7889",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/core/StructureDefinition/us-core-implantable-device" ]
+      },
+      "udiCarrier": [ {
+        "deviceIdentifier": "39479456078965",
+        "carrierAIDC": "aVZCT1J3MEtHZ29BQUFBTlNVaEVVZ0FBQWlvQUFBQjJDQUlBQUFCcGdTOUJBQUFESFVsRVFWUjQydTNhWFkraU1CaUFVYnJaLy8rWHV4Y21wdW5YdmtBQk5lZGN6YWhBUmVXWmRreGJJZWU4YlZ0SzZmM3pTM3RMYVhUdjYvYjVudHRIdHVNWkhhVzhKWEp2dTgvNEdOcDcyK05HeGhONWp2UG5Ibjh0SW51Ym40ZklmaUtqSFozNStmdGgxYk00OWc0L2RwYU9mV3JPbk1rN1g4Mjk0NDkvY2lPZnpjanJGWC9GVjczZjRzZmRleFdkdjhmT3ZCOUcxN1Q0RlcvK1drZk93OHVmRFFCdUp6OEF5QThBOGdNQThnT0EvQUNBL0FBZ1B3QWdQd0RJRHdESUR3RHlBNEQ4QUlEOEFDQS9BQ0EvQU1nUEFNZ1BBUElEQVBJRGdQd0FJRDhBSUQ4QXlBOEF5QThBOGdNQThnT0EvQUNBL0FBZ1B3RElEd0RJRHdEeUF3RHlBNEQ4QUlEOEFDQS9BQ0EvQU1nUEFQSURBUElEZ1B3QWdQd0FJRDhBSUQ4QXlBOEF5QThBOGdPQS9BQ0EvQUFnUHdBZ1B3RElEd0RJRHdEeUF3RHlBNEQ4QUNBL0FDQS9BTWdQQU1nUEFQSURBUElEZ1B3QWdQd0FJRDhBeUE4QXlBOEE4Z01BOGdPQS9BQ0EvQUFnUHdBZ1B3RElEd0R5QXdEeUE0RDhBSUQ4QUNBL0FDQS9BTWdQQU1nUEFQSURnUHc0QlFESUR3RHlBd0R5QTREOEFJRDhBQ0EvQUNBL0FNZ1BBTWdQQVBJRGdQd0FnUHdBSUQ4QUlEOEFmSnVVYzNZV0FERDdBVUIrQU9BQ2Y1MENycEJTcW02NWRKbjNkYmdEaHlqSGVXYUVLUzFieDE0MXBBZWZBc2dQVDdyeldwWnpib08zZDV5ZmMvMzl3Q0hCY2hiZllHWERQbWRJWVBZRFcvZHYrZmV2M2VXbTkzcGErYkR5Y2p5LzRwOWN3aG9OYWZSemRaVEpNOW8xcFBZbzVlYWpFeEkvZXZka1ByWDZoL3pBc3RnRU85RnRVdG1lcWtEZERZUDdQSlBKNEJ5bHUvbXVmWGFMTWlwMzlaajQwYnR0TzNucVFINTRYbnZaNm9aazE5WHRHeStGQjhiY1ZtZTBrLy91UEhoMHEzeklENy9mcFBsUzFmSzUxOExOMjluWTFVT3FnbjFQbTNVSStlRUh0Yk9mZHJYbnFUbkgxZE9zaFYvc3ZyUVFWdHU0aDIrKzhVQjd0cU9yUGNjdXU4R3RSbk9hNmwveEIvNlR0SHhJVnp4M015SE1mdmlkMkVUK3BwNTNxTnBxL2tXdjk3SmV0Yy9nZCtSR2FReHVQai82MmlITjV5N0JvMWNucy95cW9aa1FkMXdpdkwzNHhza1Q4TzBzdmdGZzlnT0EyUThBeUE4QXYrTWZKakpxNXcrMDZrY0FBQUFBU1VWT1JLNUNZSUk9"
+      } ],
+      "distinctIdentifier": "39479456078965",
+      "manufactureDate": "2007-11-03T15:30:00+05:30",
+      "expirationDate": "2007-11-03T15:30:00+05:30",
+      "lotNumber": "10884308307291874",
+      "serialNumber": "33951957783598776",
+      "type": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "72506001",
+          "display": "Implantable defibrillator, device (physical object)"
+        } ],
+        "text": "Implantable defibrillator, device (physical object)"
+      },
+      "parent": {
+        "reference": "Patient/Patient/4645"
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "resource": {
+      "resourceType": "Parameters",
+      "id": "3c2bc5e9-7d8a-444c-be33-97af9935122d",
+      "parameter": [ {
+        "name": "resourceType",
+        "valueString": "Device"
+      }, {
+        "name": "requestId",
+        "valueString": "bf9bbe1a-fbb7-406b-8fa8-ae7b6688ccc5"
+      }, {
+        "name": "endpointUrl",
+        "valueString": "http://localhost:8089/fhir/r4/1005"
+      }, {
+        "name": "practiceId",
+        "valueString": "1005"
+      }, {
+        "name": "patient",
+        "valueReference": {
+          "reference": "Patient/1137192"
+        }
+      } ]
+    }
+  } ]
+}

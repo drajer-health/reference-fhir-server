@@ -1,0 +1,19 @@
+{
+    "active": false,
+    "patientGuid": "1137192",
+    "sub": "21260_johnsmith",
+    "aud": [
+        "client1",
+        "http://localhost:8090/fhir/r4/1005"
+    ],
+    "nbf": 1654512950,
+    "providerGuid": "9336",
+    "practiceGuid": "1005",
+    "scope": "patient/Medication.read patient/CareTeam.read patient/Practitioner.read launch/patient openid patient/Goal.read patient/Immunization.read patient/AllergyIntolerance.read patient/DocumentReference.read patient/Procedure.read fhirUser patient/Provenance.read patient/MedicationRequest.read patient/Device.read patient/DiagnosticReport.read patient/Patient.read patient/Location.read offline_access patient/Condition.read patient/Observation.read patient/CarePlan.read patient/Encounter.read patient/Organization.read patient/Binary.read",
+    "iss": "https://smartonfhirstagingsrv.eclinicalweb.com/oauth",
+    "exp": 1654513251,
+    "iat": 1654512951,
+    "client_id": "client1",
+    "token_type": "Bearer",
+    "vendorId":"vendorId-123"
+}

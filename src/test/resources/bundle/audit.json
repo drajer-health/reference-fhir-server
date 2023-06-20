@@ -1,0 +1,14 @@
+{
+ "totalCount":2,
+ "dataSet":[
+ {
+  "practiceId": "1005",
+  "count": 74
+ },
+ {
+  "practiceId": "123", 
+   "count": 13
+   
+   }
+ ]
+ }

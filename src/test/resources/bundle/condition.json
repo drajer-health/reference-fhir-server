@@ -1,0 +1,290 @@
+{
+    "resourceType": "Bundle",
+    "id": "8f8d2322-a2cf-4518-a380-fccf832fa902",
+    "meta": {
+        "lastUpdated": "2022-04-01T13:02:26.906+05:30"
+    },
+    "type": "searchset",
+    "total": 2,
+    "link": [
+        {
+            "relation": "self",
+            "url": "http://localhost:8089/fhir/r4/1005/Condition?patient=123"
+        }
+    ],
+    "entry": [
+        {
+            "fullUrl": "http://localhost:8089/fhir/r4/1005/Condition/8888",
+            "resource": {
+                "resourceType": "Condition",
+                "id": "8888",
+                "meta": {
+                    "lastUpdated": "2021-01-07T20:46:48.000+05:30",
+                    "profile": [
+                        "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"
+                    ]
+                },
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table border=\"1\"><tbody><tr><td>Status</td><td><span>resolved</span></td></tr><tr><td>Condition code</td><td><span>M53.2</span></td></tr><tr><td>Condition name</td><td><span>Spinal instabilities</span></td></tr><tr><td>Condition recorded date</td><td><span>07 January 2021</span></td></tr></tbody></table></div>"
+                },
+                "clinicalStatus": {
+                    "coding": [
+                        {
+                            "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                            "code": "resolved",
+                            "display": "Resolved"
+                        }
+                    ],
+                    "text": "Resolved"
+                },
+                "verificationStatus": {
+                    "coding": [
+                        {
+                            "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+                            "code": "confirmed",
+                            "display": "Confirmed"
+                        }
+                    ],
+                    "text": "Confirmed"
+                },
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                                "code": "problem-list-item",
+                                "display": "Problem List Item"
+                            }
+                        ],
+                        "text": "Problem List Item"
+                    }
+                ],
+                "severity": {
+                    "coding": [
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "255604002",
+                            "display": "Mild"
+                        }
+                    ],
+                    "text": "Mild"
+                },
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                            "code": "M53.2",
+                            "display": "Spinal instabilities"
+                        }
+                    ],
+                    "text": "Spinal instabilities"
+                },
+                "subject": {
+                    "reference": "Patient/999",
+                    "type": "Patient"
+                },
+                "encounter": {
+                    "reference": "Encounter/4466",
+                    "type": "Encounter"
+                },
+                "onsetDateTime": "2021-01-07T20:46:48+05:30",
+                "abatementDateTime": "2021-01-07T20:46:48+05:30",
+                "recordedDate": "2021-01-07T20:46:48+05:30",
+                "recorder": {
+                    "reference": "Practitioner/4466",
+                    "type": "Practitioner"
+                },
+                "note": [
+                    {
+                        "text": "Everything went well"
+                    },
+                    {
+                        "text": "Everything went well"
+                    }
+                ]
+            },
+            "search": {
+                "mode": "match"
+            }
+        },
+        {
+            "fullUrl": "http://localhost:8089/fhir/r4/1005/Provenance/PRB-8888",
+            "resource": {
+                "resourceType": "Provenance",
+                "id": "PRB-8888",
+                "meta": {
+                    "profile": [
+                        "http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance"
+                    ]
+                },
+                "target": [
+                    {
+                        "reference": "Condition/8888"
+                    }
+                ],
+                "recorded": "2021-01-07T20:46:48.000+05:30",
+                "agent": [
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+                                    "code": "author",
+                                    "display": "Author"
+                                }
+                            ]
+                        },
+                        "who": {
+                            "reference": "Practitioner/4466",
+                            "type": "Practitioner"
+                        }
+                    }
+                ]
+            },
+            "search": {
+                "mode": "include"
+            }
+        },
+        {
+            "fullUrl": "http://localhost:8089/fhir/r4/1005/Condition/8888",
+            "resource": {
+                "resourceType": "Condition",
+                "id": "8888",
+                "meta": {
+                    "lastUpdated": "2021-01-07T20:46:48.000+05:30",
+                    "profile": [
+                        "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"
+                    ]
+                },
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table border=\"1\"><tbody><tr><td>Status</td><td><span>inactive</span></td></tr><tr><td>Condition code</td><td><span>99.06</span></td></tr><tr><td>Condition name</td><td><span>Transfusion of coagulation factors</span></td></tr><tr><td>Condition recorded date</td><td><span>07 January 2021</span></td></tr></tbody></table></div>"
+                },
+                "clinicalStatus": {
+                    "coding": [
+                        {
+                            "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                            "code": "inactive",
+                            "display": "Inactive"
+                        }
+                    ],
+                    "text": "Inactive"
+                },
+                "verificationStatus": {
+                    "coding": [
+                        {
+                            "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+                            "code": "confirmed",
+                            "display": "Confirmed"
+                        }
+                    ],
+                    "text": "Confirmed"
+                },
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://hl7.org/fhir/us/core/CodeSystem/condition-category",
+                                "code": "health-concern",
+                                "display": "Health Concern"
+                            }
+                        ],
+                        "text": "Health Concern"
+                    },
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                                "code": "problem-list-item",
+                                "display": "Problem List Item"
+                            }
+                        ],
+                        "text": "Problem List Item"
+                    }
+                ],
+                "severity": {
+                    "coding": [
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "255604002",
+                            "display": "Mild"
+                        }
+                    ],
+                    "text": "Mild"
+                },
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/sid/icd-9-cm",
+                            "code": "99.06",
+                            "display": "Transfusion of coagulation factors"
+                        }
+                    ],
+                    "text": "Transfusion of coagulation factors"
+                },
+                "subject": {
+                    "reference": "Patient/1234",
+                    "type": "Patient"
+                },
+                "encounter": {
+                    "reference": "Encounter/8989",
+                    "type": "Encounter"
+                },
+                "onsetDateTime": "2021-01-07T20:46:48+05:30",
+                "abatementDateTime": "2021-01-07T20:46:48+05:30",
+                "recordedDate": "2021-01-07T20:46:48+05:30",
+                "recorder": {
+                    "reference": "Practitioner/4466",
+                    "type": "Practitioner"
+                },
+                "note": [
+                    {
+                        "text": "Everything went well"
+                    }
+                ]
+            },
+            "search": {
+                "mode": "match"
+            }
+        },
+        {
+            "fullUrl": "http://localhost:8089/fhir/r4/1005/Provenance/PRB-8888",
+            "resource": {
+                "resourceType": "Provenance",
+                "id": "PRB-8888",
+                "meta": {
+                    "profile": [
+                        "http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance"
+                    ]
+                },
+                "target": [
+                    {
+                        "reference": "Condition/8888"
+                    }
+                ],
+                "recorded": "2021-01-07T20:46:48.000+05:30",
+                "agent": [
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+                                    "code": "author",
+                                    "display": "Author"
+                                }
+                            ]
+                        },
+                        "who": {
+                            "reference": "Practitioner/4466",
+                            "type": "Practitioner"
+                        }
+                    }
+                ]
+            },
+            "search": {
+                "mode": "include"
+            }
+        }
+    ]
+}

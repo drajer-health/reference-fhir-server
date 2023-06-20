@@ -1,0 +1,68 @@
+# Service registers under this name
+spring:
+  application:
+    name: ix-auth-server
+
+# HTTP Server (Tomcat) Port
+server: 
+  port: 8055
+  error:
+    whitelabel:
+      enabled: false
+    include-stacktrace: never
+
+datasource:
+ driverClassName: org.postgresql.Driver
+ url: jdbc:postgresql://${DB_HOST}:${DB_PORT}/${DB_NAME}
+ username: ${DB_USERNAME}
+ password: ${DB_PASSWORD}
+
+hibernate:
+  dialect: org.hibernate.dialect.PostgreSQLDialect
+  format_sql: true
+  hbm2ddl_auto: update
+  show-sql: true
+#  packages-Scan: com.interopx.fhir.auth.server.model,com.ecw.audit.facade.entity
+  
+security:
+  basic:
+    enable: false
+    ignored: /**
+jwt:
+  expiration: 570
+  refresh:
+    expiration: 259200
+  loginsecret: logintoken
+  logintoken: 
+    expiration: 30
+refresh_token_expiry_time_in_days: 90
+
+application: 
+  name: ix-auth-server
+  
+audit: 
+  enable: true
+  
+auth0:
+  client-url: https://${AUTH0_DOMAIN}
+  domain: ${AUTH0_DOMAIN}
+  clientId: ${AUTH0_CLIENT_ID}
+  allowed-urls: ${SECURE_API_LIST}
+  not-allowed-urls: ${OPEN_API_LIST}
+  
+token:
+  expiration-time: ${TOKEN_EXPIRATION_TIME}
+  
+#Remove later
+AUTH0_DOMAIN: default-development-arcadia.us.auth0.com
+AUTH0_CLIENT_ID: oNNNQWwQMQ6hZHoqW60mqgx1LBhNIA6q
+SECURE_API_LIST: http://localhost:8055/*, https://authserver.development.arcadiaanalytics.com/ix-auth-server/*
+OPEN_API_LIST: https://authserver.development.arcadiaanalytics.com/ix-auth-server/config
+
+TOKEN_EXPIRATION_TIME: 300
+
+DB_HOST: localhost
+DB_PORT: 5432
+DB_NAME: test
+DB_USERNAME: postgres
+DB_PASSWORD: root

@@ -1,0 +1,297 @@
+{
+	"resourceType": "Bundle",
+	"id": "2fad13db-3135-49c4-8e67-29288b61caee",
+	"type": "searchset",
+	"total": 2,
+	"entry": [
+		{
+			"fullUrl": "http://localhost:8089/fhir/r4/1005/DiagnosticReport/456",
+			"resource": {
+				"resourceType": "DiagnosticReport",
+				"id": "456",
+				"meta": {
+					"lastUpdated": "2021-06-24T15:40:39.741+05:30",
+					"profile": [
+						"http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab"
+					]
+				},
+				"status": "final",
+				"category": [
+					{
+						"coding": [
+							{
+								"system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+								"code": "LAB",
+								"display": "Laboratory"
+							}
+						],
+						"text": "LABORATORY"
+					}
+				],
+				"code": {
+					"coding": [
+						{
+							"system": "http://loinc.org",
+							"code": "24323-8",
+							"display": "Comprehensive metabolic 2000 panel - Serum or Plasma"
+						}
+					],
+					"text": "Comprehensive metabolic 2000 panel - Serum or Plasma"
+				},
+				"subject": {
+					"reference": "Patient/1234-sdfgh-sdfghfd",
+					"type": "Patient"
+				},
+				"encounter": {
+					"reference": "Encounter/f91cb963-a2eb-4b49-9e44-0784fdb37b23",
+					"type": "Encounter"
+				},
+				"effectiveDateTime": "2010-09-24T05:30:00+05:30",
+				"_issued": {
+					"extension": [
+						{
+							"url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+							"valueCode": "not-performed"
+						}
+					]
+				},
+				"performer": [
+					{
+						"reference": "Practitioner/1234-sdfgh-sdfghfd",
+						"type": "Practitioner"
+					},
+					{
+						"reference": "Practitioner/123423456543456-sdfgh-sdfghfd",
+						"type": "Practitioner"
+					}
+				],
+				"conclusion": "test conclusion",
+				"presentedForm": [
+					{
+						"contentType": "text/plain",
+						"data": "Y0dSbVNXNUNZWE5sTmpSQ2FXNWhjbms9"
+					},
+					{
+						"contentType": "application/pdf",
+						"data": "Y0dSbVNXNUNZWE5sTmpSQ2FXNWhjbms9"
+					}
+				]
+			},
+			"search": {
+				"mode": "match"
+			}
+		},
+		{
+			"fullUrl": "http://localhost:8089/fhir/r4/1005/Provenance/DIA-456",
+			"resource": {
+				"resourceType": "Provenance",
+				"id": "DIA-456",
+				"meta": {
+					"profile": [
+						"http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance"
+					]
+				},
+				"target": [
+					{
+						"reference": "DiagnosticReport/456"
+					}
+				],
+				"recorded": "2021-06-24T15:40:39.741+05:30",
+				"agent": [
+					{
+						"type": {
+							"coding": [
+								{
+									"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+									"code": "author",
+									"display": "Author"
+								}
+							]
+						},
+						"who": {
+							"reference": "Practitioner/1234-sdfgh-sdfghfd",
+							"type": "Practitioner"
+						}
+					},
+					{
+						"type": {
+							"coding": [
+								{
+									"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+									"code": "author",
+									"display": "Author"
+								}
+							]
+						},
+						"who": {
+							"reference": "Practitioner/123423456543456-sdfgh-sdfghfd",
+							"type": "Practitioner"
+						}
+					}
+				]
+			},
+			"search": {
+				"mode": "include"
+			}
+		},
+		{
+			"fullUrl": "http://localhost:8089/fhir/r4/1005/DiagnosticReport/123",
+			"resource": {
+				"resourceType": "DiagnosticReport",
+				"id": "123",
+				"meta": {
+					"lastUpdated": "2021-06-24T15:40:39.741+05:30",
+					"profile": [
+						"http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note"
+					]
+				},
+				"status": "final",
+				"category": [
+					{
+						"coding": [
+							{
+								"system": "http://loinc.org",
+								"code": "LP29684-5",
+								"display": "Radiology"
+							}
+						],
+						"text": "adsfsdf"
+					}
+				],
+				"code": {
+					"coding": [
+						{
+							"system": "http://loinc.org",
+							"code": "24323-8",
+							"display": "Comprehensive metabolic 2000 panel - Serum or Plasma"
+						}
+					],
+					"text": "Comprehensive metabolic 2000 panel - Serum or Plasma"
+				},
+				"subject": {
+					"reference": "Patient/1234-sdfgh-sdfghfd",
+					"type": "Patient"
+				},
+				"encounter": {
+					"reference": "Encounter/f91cb963-a2eb-4b49-9e44-0784fdb37b23",
+					"type": "Encounter"
+				},
+				"_effectiveDateTime": {
+					"extension": [
+						{
+							"url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+							"valueCode": "not-performed"
+						}
+					]
+				},
+				"performer": [
+					{
+						"reference": "Practitioner/1234-sdfgh-sdfghfd",
+						"type": "Practitioner"
+					},
+					{
+						"reference": "Practitioner/123423456543456-sdfgh-sdfghfd",
+						"type": "Practitioner"
+					}
+				],
+				"conclusion": "test conclusion",
+				"presentedForm": [
+					{
+						"contentType": "text/plain",
+						"data": "Y0dSbVNXNUNZWE5sTmpSQ2FXNWhjbms9"
+					},
+					{
+						"contentType": "application/pdf",
+						"data": "Y0dSbVNXNUNZWE5sTmpSQ2FXNWhjbms9"
+					}
+				]
+			},
+			"search": {
+				"mode": "match"
+			}
+		},
+		{
+			"fullUrl": "http://localhost:8089/fhir/r4/1005/Provenance/DIA-123",
+			"resource": {
+				"resourceType": "Provenance",
+				"id": "DIA-123",
+				"meta": {
+					"profile": [
+						"http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance"
+					]
+				},
+				"target": [
+					{
+						"reference": "DiagnosticReport/123"
+					}
+				],
+				"recorded": "2021-06-24T15:40:39.741+05:30",
+				"agent": [
+					{
+						"type": {
+							"coding": [
+								{
+									"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+									"code": "author",
+									"display": "Author"
+								}
+							]
+						},
+						"who": {
+							"reference": "Practitioner/1234-sdfgh-sdfghfd",
+							"type": "Practitioner"
+						}
+					},
+					{
+						"type": {
+							"coding": [
+								{
+									"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+									"code": "author",
+									"display": "Author"
+								}
+							]
+						},
+						"who": {
+							"reference": "Practitioner/123423456543456-sdfgh-sdfghfd",
+							"type": "Practitioner"
+						}
+					}
+				]
+			},
+			"search": {
+				"mode": "include"
+			}
+		},
+		{
+			"resource": {
+				"resourceType": "Parameters",
+				"id": "6f570d17-3a06-4b77-8513-c71618d59b32",
+				"parameter": [
+					{
+						"name": "resourceType",
+						"valueString": "DiagnosticReport"
+					},
+					{
+						"name": "requestId",
+						"valueString": "320bacc5-7cae-4ba6-8062-db6c23c710c4"
+					},
+					{
+						"name": "endpointUrl",
+						"valueString": "http://localhost:8089/fhir/r4/1005"
+					},
+					{
+						"name": "practiceId",
+						"valueString": "1005"
+					},
+					{
+						"name": "encounter",
+						"valueReference": {
+							"reference": "Encounter/123"
+						}
+					}
+				]
+			}
+		}
+	]
+}

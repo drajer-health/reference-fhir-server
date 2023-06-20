@@ -1,0 +1,87 @@
+{
+    "resourceType": "Bundle",
+    "id": "c8d17f59-cab4-4b27-8e89-7b882ee92356",
+    "meta": {
+        "lastUpdated": "2022-03-28T19:20:44.777+05:30"
+    },
+    "type": "searchset",
+    "total": 1,
+    "link": [
+        {
+            "relation": "self",
+            "url": "http://localhost:8089/fhir/r4/1005/Practitioner?name=Smith"
+        }
+    ],
+    "entry": [
+        {
+            "fullUrl": "http://localhost:8089/fhir/r4/1005/Practitioner/9899",
+            "resource": {
+                "resourceType": "Practitioner",
+                "id": "9899",
+                "meta": {
+                    "lastUpdated": "2022-02-22T05:30:00.000+05:30",
+                    "profile": [
+                        "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"
+                    ]
+                },
+                "identifier": [
+                    {
+                        "system": "http://hl7.org/fhir/sid/us-npi",
+                        "value": "123"
+                    },
+                    {
+                        "system": "urn:oid:2.16.840.1.113883.4.391",
+                        "value": "679"
+                    },
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "system": "http://hl7.org/fhir/v2/0203",
+                                    "code": "DEA",
+                                    "display": "Drug Enforcement Administration registration number"
+                                }
+                            ],
+                            "text": "DOCDEA"
+                        },
+                        "system": "urn:oid:2.16.840.1.113883.4.814",
+                        "value": "100"
+                    }
+                ],
+                "name": [
+                    {
+                        "text": "This is full name representation of name",
+                        "family": "John",
+                        "given": [
+                            "Thomas",
+                            "first",
+                            "second"
+                        ],
+                        "prefix": [
+                            "Mr"
+                        ],
+                        "suffix": [
+                            "MD"
+                        ]
+                    }
+                ],
+                "telecom": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-direct",
+                                "valueBoolean": true
+                            }
+                        ],
+                        "system": "email",
+                        "value": "savitha.n@xyramsoft.com",
+                        "use": "work"
+                    }
+                ]
+            },
+            "search": {
+                "mode": "match"
+            }
+        }
+    ]
+}

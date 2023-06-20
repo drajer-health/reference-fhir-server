@@ -1,0 +1,37 @@
+<!--/* 
+This top section is not exported as a part of the Narrative,
+it is only present so that this template can be viewed in 
+a browser. 
+-->
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="narrative.css"/>
+	</head>
+	<body>
+<!--*/-->
+
+<div>
+	<th:block th:unless="${#lists.isEmpty(resource.name)}">
+		<div class="hapiHeaderText" th:narrative="${resource.name[0]}"/>
+	</th:block>
+	<table class="hapiPropertyTable">
+		<tbody>
+			<span  th:each="identifier:${resource.identifier}">
+				<tr>
+					<td>Identifier System</td>
+					<td><span th:text="${identifier.system}"></span></td>
+				</tr>
+				<tr>
+					<td>Identifier Value</td>
+					<td><span th:text="${identifier.value}"></span></td>
+				</tr>
+			</span>
+			
+		</tbody>
+	</table>
+</div>
+
+<!--/*-->
+	</body>
+</html>
+<!--*/-->

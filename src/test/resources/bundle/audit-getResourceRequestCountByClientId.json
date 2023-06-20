@@ -1,0 +1,9 @@
+{
+ "totalCount": 1,
+	"dataSet": [
+		{
+			"count": 1,
+			"resourceType": "AllergyIntolerance"
+		}
+	]
+}

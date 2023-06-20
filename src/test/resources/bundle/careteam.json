@@ -1,0 +1,238 @@
+{
+    "resourceType": "Bundle",
+    "id": "e83a9613-2c28-4aaf-a213-17993fbc94cc",
+    "meta": {
+        "lastUpdated": "2022-03-29T10:07:49.763+00:00"
+    },
+    "type": "searchset",
+    "total": 2,
+    "link": [
+        {
+            "relation": "self",
+            "url": "http://13.233.215.23:8080/ix-ecw-fhir-facade-server/fhir/r4/1005/CareTeam?patient=1137192&status=active"
+        }
+    ],
+    "entry": [
+        {
+            "fullUrl": "http://13.233.215.23:8080/ix-ecw-fhir-facade-server/fhir/r4/1005/CareTeam/1",
+            
+            "resource": {
+                "resourceType": "CareTeam",
+                "id": "1",
+                "meta": {
+                    "lastUpdated": "2022-02-22T00:00:00.000+00:00",
+                    "profile": [
+                        "http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam"
+                    ]
+                },
+                "status": "active",
+                "name": "crisis assessment team",
+                "subject": {
+                    "reference": "Patient/12345",
+                    "type": "Patient"
+                },
+                "category": {
+					"coding": [
+						{
+							"system": "http://hl7.org/fhir/sid/cvx",
+							"code": "135",
+							"display": "Influenza, high dose seasonal"
+						},
+						{
+							"system": "http://hl7.org/fhir/sid/ndc",
+							"code": "49281-0545-15"
+						}
+					],
+					"text": "Influenza, high dose seasonal"
+				},
+                "participant": [
+                    {
+                        "role": [
+                            {
+                                "text": "Cardiovascular Disease"
+                            },
+                            {
+                                "text": "Patient (person)"
+                            }
+                        ],
+                        "member": {
+                            "reference": "Practitioner/456",
+                            "type": "Practitioner"
+                        }
+                    },
+                    {
+                        "role": [
+                            {
+                                "text": "Cardiovascular Disease"
+                            },
+                            {
+                                "text": "Patient (person)"
+                            }
+                        ],
+                        "member": {
+                            "reference": "Practitioner/456",
+                            "type": "Practitioner"
+                        }
+                    }
+                ]
+            },
+            "search": {
+                "mode": "match"
+            }
+        },
+        {
+            "fullUrl": "http://13.233.215.23:8080/ix-ecw-fhir-facade-server/fhir/r4/1005/Provenance/CT-1",
+            "resource": {
+                "resourceType": "Provenance",
+                "id": "CT-1",
+                "meta": {
+                    "profile": [
+                        "http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance"
+                    ]
+                },
+                "target": [
+                    {
+                        "reference": "CareTeam/1"
+                    }
+                ],
+                "recorded": "2022-02-22T00:00:00.000+00:00",
+                "agent": [
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+                                    "code": "author",
+                                    "display": "Author"
+                                }
+                            ]
+                        },
+                        "who": {
+                            "reference": "Practitioner/456",
+                            "type": "Practitioner"
+                        }
+                    },
+                    
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+                                    "code": "author",
+                                    "display": "Author"
+                                }
+                            ]
+                        },
+                        "who": {
+                            "reference": "Practitioner/456",
+                            "type": "Practitioner"
+                        }
+                    }
+                ]
+            },
+            "search": {
+                "mode": "include"
+            }
+        },
+        {
+            "fullUrl": "http://13.233.215.23:8080/ix-ecw-fhir-facade-server/fhir/r4/1005/CareTeam/2",
+            "resource": {
+                "resourceType": "CareTeam",
+                "id": "2",
+                "meta": {
+                    "lastUpdated": "2022-02-22T00:00:00.000+00:00",
+                    "profile": [
+                        "http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam"
+                    ]
+                },
+                "status": "active",
+                "participant": [
+                    {
+                        "role": [
+                            {
+                                "text": "Cardiovascular Disease"
+                            },
+                            {
+                                "text": "Patient (person)"
+                            }
+                        ],
+                        "member": {
+                            "reference": "Practitioner/741",
+                            "type": "Practitioner"
+                        }
+                    },
+                    {
+                        "role": [
+                            {
+                                "text": "Cardiovascular Disease"
+                            },
+                            {
+                                "text": "Patient (person)"
+                            }
+                        ],
+                        "member": {
+                            "reference": "Practitioner/741",
+                            "type": "Practitioner"
+                        }
+                    }
+                ]
+            },
+            "search": {
+                "mode": "match"
+            }
+        },
+        {
+            "fullUrl": "http://13.233.215.23:8080/ix-ecw-fhir-facade-server/fhir/r4/1005/Provenance/CT-2",
+            "resource": {
+                "resourceType": "Provenance",
+                "id": "CT-2",
+                "meta": {
+                    "profile": [
+                        "http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance"
+                    ]
+                },
+                "target": [
+                    {
+                        "reference": "CareTeam/2"
+                    }
+                ],
+                "recorded": "2022-02-22T00:00:00.000+00:00",
+                "agent": [
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+                                    "code": "author",
+                                    "display": "Author"
+                                }
+                            ]
+                        },
+                        "who": {
+                            "reference": "Practitioner/741",
+                            "type": "Practitioner"
+                        }
+                    },
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+                                    "code": "author",
+                                    "display": "Author"
+                                }
+                            ]
+                        },
+                        "who": {
+                            "reference": "Practitioner/741",
+                            "type": "Practitioner"
+                        }
+                    }
+                ]
+            },
+            "search": {
+                "mode": "include"
+            }
+        }
+    ]
+}

@@ -1,0 +1,50 @@
+<!--/* 
+This top section is not exported as a part of the Narrative,
+it is only present so that this template can be viewed in 
+a browser. 
+-->
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="narrative.css"/>
+	</head>
+	<body>
+<!--*/-->
+
+<div>
+	<table border="1">
+		<tbody>
+			<tr th:if="${not resource.identifier.empty}">
+				<td>Identifier</td>
+				<td th:narrative="${resource.identifier[0]}"></td>
+			</tr>
+			<tr th:if="${not resource.statusElement.empty}">
+				<td>Status</td>
+				<td><span th:text="${resource.status}"></span></td>
+			</tr>
+			<tr>
+			    <td>Encounter Code</td>
+				<td><span th:text="${resource.class_.code}"></span></td>				
+			</tr>
+			<tr>
+			<td>Encounter Name</td>
+				<td><span th:text="${resource.class_.display}"></span></td>
+			</tr>
+			<tr th:if="${not resource.period.empty}">
+			<span th:if="${resource.period.start!=null}">
+				<td> Start Date</td>
+				<td><span th:text="${#dates.format(resource.period.start,'dd MMMM yyyy')}"></span></td>
+				</span>
+				</tr>
+				<tr>
+				<span th:if="${resource.period.end!=null}">
+				<td>End Date</td>
+				<td><span th:text="${#dates.format(resource.period.end,'dd MMMM yyyy')}"></span></td>
+				</span>
+			</tr>					
+		</tbody>
+	</table>
+</div>
+<!--/*-->
+	</body>
+</html>
+<!--*/-->

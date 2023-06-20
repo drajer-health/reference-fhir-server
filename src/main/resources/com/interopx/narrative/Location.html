@@ -1,0 +1,51 @@
+<!--/* 
+This top section is not exported as a part of the Narrative,
+it is only present so that this template can be viewed in 
+a browser. 
+-->
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="narrative.css"/>
+	</head>
+	<body>
+<!--*/-->
+
+<div>
+	<table border="1">
+		<tbody>
+			<tr th:if="${not resource.statusElement.empty}">
+				<td>Status</td>
+				<td><span th:text="${resource.status}"></span></td>
+			</tr>
+			<tr th:if="${not resource.nameElement.empty}">
+				<td>Name</td>
+				<td><span th:text="${resource.name}"></span></td>
+			</tr>
+			<tr th:if="${not resource.address.empty}">
+				<td>Address</td>
+				<td><div th:narrative="${resource.address}"/>
+				<span th:if="${resource.address.postalCode!=null}">
+				<span th:text="${resource.address.postalCode}"></span>
+				</span>
+				</td>
+			</tr>
+			<span th:if="${not resource.telecom.empty}">
+				<span th:each="telecom:${resource.telecom}">
+				<tr>
+					<td>Telecom System</td>
+					<td><span th:text="${telecom.system}"></span></td>
+				</tr>
+				<tr>
+					<td>Telecom Value</td>
+					<td><span th:text="${telecom.value}"></span></td>
+				</tr>
+				</span>
+			</span>
+		</tbody>
+	</table>
+</div>
+
+<!--/*-->
+	</body>
+</html>
+<!--*/-->

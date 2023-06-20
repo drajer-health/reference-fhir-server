@@ -1,0 +1,87 @@
+{
+	"resourceType": "Bundle",
+	"id": "b134ad34-3406-478b-bda8-faaef4267057",
+	"type": "searchset",
+	"total": 1,
+	"entry": [
+		{
+			"fullUrl": "http://localhost:8089/fhir/r4/1005/Goal/1",
+			"resource": {
+				"resourceType": "Goal",
+				"id": "1",
+				"meta": {
+					"lastUpdated": "2022-02-22T05:30:00.000+05:30",
+					"profile": [
+						"http://hl7.org/fhir/us/core/StructureDefinition/us-core-goal"
+					]
+				},
+				"lifecycleStatus": "proposed",
+				"description": {
+					"text": "Patient is targeting a pulse oximetry of 92% and a weight of 195 lbs"
+				},
+				"subject": {
+					"reference": "Patient/1444"
+				},
+				"target": [
+					{
+						"dueDate": "2022-02-26"
+					}
+				]
+			},
+			"search": {
+				"mode": "match"
+			}
+		},
+		{
+			"fullUrl": "http://localhost:8089/fhir/r4/1005/Provenance/GL-1",
+			"resource": {
+				"resourceType": "Provenance",
+				"id": "GL-1",
+				"meta": {
+					"profile": [
+						"http://hl7.org/fhir/us/core/StructureDefinition/us-core-goal"
+					]
+				},
+				"target": [
+					{
+						"reference": "Goal/1"
+					}
+				],
+				"recorded": "2022-02-22T05:30:00.000+05:30"
+			},
+			"search": {
+				"mode": "include"
+			}
+		},
+		{
+			"resource": {
+				"resourceType": "Parameters",
+				"id": "436d38bb-ec0f-4d7c-aa80-a1f1bb900810",
+				"parameter": [
+					{
+						"name": "resourceType",
+						"valueString": "Goal"
+					},
+					{
+						"name": "requestId",
+						"valueString": "1f593772-f394-4d13-8f7c-1d5bc9b8059c"
+					},
+					{
+						"name": "endpointUrl",
+						"valueString": "http://localhost:8089/fhir/r4/1005"
+					},
+					{
+						"name": "practiceId",
+						"valueString": "1005"
+					},
+					{
+						"name": "patient",
+						"valueReference": {
+							"reference": "ca.uhn.fhir.rest.gclient.ReferenceClientParam@52ef5f67/1137192"
+						}
+					}
+				]
+			}
+		}
+	]
+}

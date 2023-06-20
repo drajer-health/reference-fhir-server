@@ -1,0 +1,35 @@
+{
+	"resourceType": "Bundle",
+	"id": "849f4700-39f5-41bc-a923-d5e25866623e",
+	"type": "searchset",
+	"entry": [{
+		"resource": {
+			"resourceType": "OperationOutcome",
+			"id": "018cecf3-4d7c-4a95-9438-560ec5ec5025",
+			"parameter": [{
+				"name": "resourceType",
+				"valueString": "Immunization"
+			}, {
+				"name": "requestId",
+				"valueString": "d644ed3d-b1e5-4590-85e7-774f99680e97"
+			}, {
+				"name": "endpointUrl",
+				"valueString": "http://localhost:8089/fhir/r4/1005"
+			}, {
+				"name": "practiceId",
+				"valueString": "1005"
+			}, {
+				"name": "patient",
+				"valueReference": {
+					"reference": "Patient/1137192"
+				}
+			}, {
+				"name": "status",
+				"valueString": "completed"
+			}, {
+				"name": "status",
+				"valueString": "not-done"
+			}]
+		}
+	}]
+}

@@ -1,0 +1,43 @@
+<!--/* 
+This top section is not exported as a part of the Narrative,
+it is only present so that this template can be viewed in 
+a browser. 
+-->
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="narrative.css"/>
+	</head>
+	<body>
+<!--*/-->
+
+<div>
+	<table border="1">
+		<tbody>
+			<tr th:if="${not resource.statusElement.empty}">
+				<td>Status</td>
+				<td><span th:text="${resource.status}"></span></td>
+			</tr>
+			<span  th:each="roles : ${resource.participant}">
+				<tr	th:if="${not roles.role[0].coding.empty} AND ${not roles.role[0].coding[0].code != null}">
+					<td>Participant Role Code</td>
+					<td><span th:text="${roles.role[0].coding[0].code}"></span></td>
+				</tr>
+				<span th:with="expr_result = ${not roles.role[0].coding.empty} AND ${roles.role[0].coding[0].display!=null}">
+				<tr	th:if="${expr_result}">
+					<td>Participant Role Name</td>
+					<td><span th:text="${roles.role[0].coding[0].display}"></span></td>
+				</tr>				
+				<tr	th:unless="${expr_result}">
+					<td>Participant Role Name</td>
+					<td><span th:text="${roles.role[0].text}"></span></td>
+				</tr>
+				</span>
+			</span>
+		</tbody>
+	</table>
+</div>
+
+<!--/*-->
+	</body>
+</html>
+<!--*/-->

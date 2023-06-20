@@ -1,0 +1,172 @@
+{
+    "resourceType": "Bundle",
+    "id": "2c2c7081-a688-4911-9d6c-37d91e7c1eed",
+    "meta": {
+        "lastUpdated": "2022-05-12T17:14:41.992+05:30"
+    },
+    "type": "searchset",
+    "total": 1,
+    "link": [
+        {
+            "relation": "self",
+            "url": "http://localhost:8089/fhir/r4/1005/MedicationAdministration?patient=1137192"
+        }
+    ],
+    "entry": [
+        {
+            "fullUrl": "http://localhost:8089/fhir/r4/1005/MedicationAdministration/222_1",
+            "resource": {
+                "resourceType": "MedicationAdministration",
+                "id": "222_1",
+                "meta": {
+                    "lastUpdated": "2021-01-07T20:46:48.000+05:30",
+                    "profile": [
+                        "http://hl7.org/fhir/R4/medicationadministration"
+                    ]
+                },
+                "status": "completed",
+                "medicationCodeableConcept": {
+                    "coding": [
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "261000",
+                            "display": "Codeine phosphate"
+                        }
+                    ],
+                    "text": "Codeine phosphate"
+                },
+                "subject": {
+                    "reference": "Patient/9899",
+                    "type": "Patient"
+                },
+                "context": {
+                    "reference": "Encounter/1001",
+                    "type": "Encounter"
+                },
+                "effectiveDateTime": "2021-01-07T20:46:48+05:30",
+                "performer": [
+                    {
+                        "actor": {
+                            "reference": "Practitioner/2002",
+                            "type": "Practitioner"
+                        }
+                    },
+                    {
+                        "actor": {
+                            "reference": "Practitioner/2003",
+                            "type": "Practitioner"
+                        }
+                    }
+                ],
+                "note": [
+                    {
+                        "text": "Device for hearing issue"
+                    },
+                    {
+                        "text": "123"
+                    }
+                ],
+                "dosage": {
+                    "site": {
+                        "coding": [
+                            {
+                                "system": "http://snomed.info/sct",
+                                "code": "106004",
+                                "display": "Posterior carpal region"
+                            }
+                        ],
+                        "text": "Posterior carpal region"
+                    },
+                    "route": {
+                        "coding": [
+                            {
+                                "system": "http://snomed.info/sct",
+                                "code": "6064005",
+                                "display": "Topical route"
+                            }
+                        ],
+                        "text": "Topical route"
+                    },
+                    "method": {
+                        "coding": [
+                            {
+                                "system": "http://snomed.info/sct",
+                                "code": "417924000",
+                                "display": "Apply"
+                            }
+                        ],
+                        "text": "Apply"
+                    },
+                    "dose": {
+                        "value": 116.0,
+                        "unit": "mg",
+                        "system": "http://unitsofmeasure.org",
+                        "code": "mg"
+                    }
+                }
+            },
+            "search": {
+                "mode": "match"
+            }
+        },
+        {
+            "fullUrl": "http://localhost:8089/fhir/r4/1005/Provenance/MA-222_1",
+            "resource": {
+                "resourceType": "Provenance",
+                "id": "MA-222_1",
+                "meta": {
+                    "profile": [
+                        "http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance"
+                    ]
+                },
+                "target": [
+                    {
+                        "reference": "MedicationAdministration/222_1"
+                    }
+                ],
+                "recorded": "2021-01-07T20:46:48.000+05:30",
+                "agent": [
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+                                    "code": "author",
+                                    "display": "Author"
+                                }
+                            ]
+                        },
+                        "who": {
+                            "reference": "Practitioner/2002",
+                            "type": "Practitioner"
+                        },
+                        "onBehalfOf": {
+                            "reference": "Organization/xyz"
+                        }
+                    },
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+                                    "code": "author",
+                                    "display": "Author"
+                                }
+                            ]
+                        },
+                        "who": {
+                            "reference": "Practitioner/2003",
+                            "type": "Practitioner"
+                        },
+                        "onBehalfOf": {
+                            "reference": "Organization/xyz"
+                        }
+                    }
+                ]
+            },
+            "search": {
+                "mode": "include"
+            }
+        }
+    ]
+}

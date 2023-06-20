@@ -1,0 +1,104 @@
+{
+	"resourceType": "Bundle",
+	"id": "b8467ae3-1c4f-45d6-bed6-87efb6278c05",
+	"type": "searchset",
+	"total": 1,
+	"entry": [
+		{
+			"fullUrl": "http://localhost:8089/fhir/r4/1005/CarePlan/5666",
+			"resource": {
+				"resourceType": "Binary",
+				"id": "5666",
+				"meta": {
+					"lastUpdated": "2022-02-22T05:30:00.000+05:30",
+					"profile": [
+						"http://hl7.org/fhir/StructureDefinition/CarePlan"
+					]
+				},
+				"text": {
+					"status": "generated"
+				},
+				"status": "active",
+				"intent": "order",
+				"category": [
+					{
+						
+						"text": "Assessment and Plan of Treatment"
+					}
+				],
+				"subject": {
+					"reference": "Patient/4648"
+				}
+			},
+			"search": {
+				"mode": "match"
+			}
+		},
+		{
+			"fullUrl": "http://localhost:8089/fhir/r4/1005/Provenance/CP-5666",
+			"resource": {
+				"resourceType": "Provenance",
+				"id": "CP-5666",
+				"meta": {
+					"profile": [
+						"http://hl7.org/fhir/StructureDefinition/CarePlan"
+					]
+				},
+				"target": [
+					{
+						"reference": "CarePlan/5666"
+					}
+				],
+				"recorded": "2022-02-22T05:30:00.000+05:30"
+			},
+			"search": {
+				"mode": "include"
+			}
+		},
+		{
+			"resource": {
+				"resourceType": "Parameters",
+				"id": "30539e11-0116-454a-9085-3863c05a061b",
+				"parameter": [
+					{
+						"name": "resourceType",
+						"valueString": "CarePlan"
+					},
+					{
+						"name": "requestId",
+						"valueString": "101ce48d-d81c-4052-b12b-c25ca0941f80"
+					},
+					{
+						"name": "endpointUrl",
+						"valueString": "http://localhost:8089/fhir/r4/1005"
+					},
+					{
+						"name": "practiceId",
+						"valueString": "1005"
+					},
+					{
+						"name": "patient",
+						"valueReference": {
+							"reference": "Patient/1137192"
+						}
+					},
+					{
+						"name": "category",
+						"valueCodeableConcept": {
+							"coding": [
+								{
+									"system": "http://hl7.org/fhir/us/core/CodeSystem/careplan-category",
+									"code": "assess-plan"
+								}
+							]
+						}
+					},
+					{
+						"name": "date",
+						"valueString": "ge:2018"
+					}
+				]
+			}
+		}
+	]
+}

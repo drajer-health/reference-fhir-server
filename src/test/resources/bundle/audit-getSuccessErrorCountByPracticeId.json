@@ -1,0 +1,17 @@
+{
+	"totalCount": 2,
+	"dataSet": [
+		{
+			"clientId": "290c002337428c4f00b3ec4ddf962a16",
+			"failedRequestCount": 17,
+			"successRequestCount": 37,				
+			"totalRequest": 54
+		},
+		{
+			"clientId": "290c002337428c4f00b3ec4ddf962a16",
+			"failedRequestCount": 1,
+			"successRequestCount": 3,			
+			"totalRequest": 1
+		}
+	]
+}

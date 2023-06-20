@@ -1,0 +1,18 @@
+{
+	"totalCount": 1,
+	"dataSet": [
+		{
+			"auditId": "F691D34D139546728A402AF3EDCEF388",
+			"actualRequestTime": "2022-05-18 12:42:53.571",
+			"clientId": "290c002337428c4f00b3ec4ddf962a16",
+			"requestUrl": "http://localhost:8089/fhir/r4/1005/AllergyIntolerance",
+			"practiceId": 1005,
+			"requestEndTime": "2022-05-18 12:40:53.571",
+			"methodName": "search",
+			"resourceType": "AllergyIntolerance",
+			"auditDate": "2022-05-12",
+			"requestStartTime": "2022-05-18 12:38:53.571"
+		}
+	]
+}
+

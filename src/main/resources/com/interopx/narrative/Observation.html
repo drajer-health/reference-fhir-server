@@ -1,0 +1,86 @@
+<!--/* 
+This top section is not exported as a part of the Narrative,
+it is only present so that this template can be viewed in 
+a browser. 
+-->
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="narrative.css" />
+</head>
+<body>
+	<!--*/-->
+
+	<div>
+		<table border="1" class="hapiTableOfValues">
+			<tbody>
+				<tr th:if="${not resource.statusElement.empty}">
+					<td>Status</td>
+					<td><span th:text="${resource.status}"></span></td>
+				</tr>
+				<span th:if="${not resource.category.empty} AND ${not resource.category[0].coding.empty} AND ${not resource.category[0].coding[0].code != null}
+				AND ${resource.category[0].coding[0].code != 'social-history'}">
+					<tr	th:if="${not resource.code.empty} AND ${not resource.code.coding.empty} AND ${not resource.code.coding[0].code != null}">
+						<td>Observation code</td>
+						<td><span th:text="${resource.code.coding[0].code}"></span></td>
+					</tr>
+					<span th:with="expr_result = ${not resource.code.empty} AND ${not resource.code.coding.empty} AND ${resource.code.coding[0].display!=null}">
+						<tr th:if="${expr_result}">
+							<td>Observation name</td>
+							<td><span th:text="${resource.code.coding[0].display}"></span></td>
+						</tr>
+						<tr th:unless="${expr_result}">
+							<span th:if="${not resource.code.empty}">
+							<td>Observation name</td>
+							<td><span th:text="${resource.code.text}"></span></td>
+					</span>
+					</tr>
+					</span>
+					<span th:if="${resource.category[0].coding[0].code == 'vital-signs'}">
+						<tr	th:if="${resource.effective instanceof org.hl7.fhir.r4.model.DateTimeType}">
+							<td>Recorded Date</td>				
+							<td><span th:text="${#dates.format(resource.effective.value,'dd MMMM yyyy')}"></span></td>
+						</tr>
+					</span>
+					<span th:if="${resource.category[0].coding[0].code != 'vital-signs'}">
+						<tr	th:if="${resource.issued instanceof java.util.Date}">
+							<td>Issued Date</td>
+							<td><span
+								th:text="${#dates.format(resource.issued,'dd MMMM yyyy')}"></span></td>
+						</tr>
+					</span>
+				</span>
+				<span th:if="${not resource.category.empty} AND ${not resource.category[0].coding.empty} AND ${not resource.category[0].coding[0].code != null}
+				AND ${resource.category[0].coding[0].code == 'social-history'}">
+					<tr	th:if="${not resource.valueCodeableConcept.empty} AND ${not resource.valueCodeableConcept.coding.empty} AND ${not resource.valueCodeableConcept.coding[0].code != null}">
+						<td>Observation code</td>
+						<td><span th:text="${resource.valueCodeableConcept.coding[0].code}"></span></td>
+					</tr>
+					<span th:with="expr_result = ${not resource.valueCodeableConcept.empty} AND ${not resource.valueCodeableConcept.coding.empty} AND ${resource.valueCodeableConcept.coding[0].display!=null}">
+						<tr th:if="${expr_result}">
+							<td>Observation name</td>
+							<td><span th:text="${resource.valueCodeableConcept.coding[0].display}"></span></td>
+						</tr>
+						<tr th:unless="${expr_result}">
+							<span th:if="${not resource.valueCodeableConcept.empty}">
+							<td>Observation name</td>
+							<td><span th:text="${resource.valueCodeableConcept.text}"></span></td>
+					</span>
+					</tr>
+					</span>
+					<tr	th:if="${resource.issued instanceof java.util.Date}">
+						<td>Issued Date</td>
+						<td><span
+							th:text="${#dates.format(resource.issued,'dd MMMM yyyy')}"></span></td>
+					</tr>
+				</span>
+
+			</tbody>
+
+
+		</table>
+	</div>
+
+	<!--/*-->
+</body>
+</html>
+<!--*/-->

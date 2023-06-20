@@ -1,0 +1,110 @@
+{
+	"resourceType": "Bundle",
+	"id": "1c02e45b-fada-490c-a520-6f90c0c418c3",
+	"type": "searchset",
+	"total": 1,
+	"entry": [
+		{
+			"fullUrl": "http://localhost:8089/fhir/r4/1005/Organization/1",
+			"resource": {
+				"resourceType": "Organization",
+				"id": "1",
+				"meta": {
+					"versionId": "1",
+					"lastUpdated": "2022-02-22T05:30:00.000+05:30",
+					"profile": [
+						"http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
+					]
+				},
+				"identifier": [
+					{
+						"system": "http://hl7.org.fhir/sid/us-npi",
+						"value": "1144221847"
+					},
+					{
+						"system": "http://www.acme.org/organization",
+						"value": "2523423456"
+					}
+				],
+				"name": "Acme Labs",
+				
+				"address": [
+					{
+						"use": "home",
+						"line": [
+							"3300 Washtenaw Avenue",
+							"Suite 227",
+							" Near New Suites"
+						],
+						"city": "Amherst",
+						"state": "MA",
+						"postalCode": "01002",
+						"country": "USA"
+					}
+				],
+				"partOf": {
+					"reference": "Organization/1"
+				}
+			},
+			"search": {
+				"mode": "match"
+			}
+		},
+		{
+			"fullUrl": "http://localhost:8089/fhir/r4/1005/Provenance/ORG-1",
+			"resource": {
+				"resourceType": "Provenance",
+				"id": "ORG-1",
+				"meta": {
+					"profile": [
+						"http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance"
+					]
+				},
+				"target": [
+					{
+						"reference": "Organization/1"
+					}
+				],
+				"recorded": "2022-02-22T05:30:00.000+05:30",
+				"agent": [
+					{
+						"who": {
+							"reference": "Organization/1"
+						}
+					}
+				]
+			},
+			"search": {
+				"mode": "include"
+			}
+		},
+		{
+			"resource": {
+				"resourceType": "Parameters",
+				"id": "89f18fec-18ad-49da-89f3-d4c726c2640b",
+				"parameter": [
+					{
+						"name": "resourceType",
+						"valueString": "Organization"
+					},
+					{
+						"name": "requestId",
+						"valueString": "6746e35b-3d80-428f-b70f-04268e8d0c26"
+					},
+					{
+						"name": "endpointUrl",
+						"valueString": "http://localhost:8089/fhir/r4/1005"
+					},
+					{
+						"name": "practiceId",
+						"valueString": "1005"
+					},
+					{
+						"name": "name",
+						"valueString": "Health"
+					}
+				]
+			}
+		}
+	]
+}

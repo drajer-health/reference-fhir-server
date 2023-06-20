@@ -1,0 +1,153 @@
+{
+	"resourceType": "Bundle",
+	"id": "8079b392-73d2-4f3f-9ecd-388e482767a8",
+	"type": "searchset",
+	"total": 1,
+	"entry": [
+		{
+			"fullUrl": "http://localhost:8089/fhir/r4/1005/MedicationRequest/1591",
+			"resource": {
+				"resourceType": "MedicationRequest",
+				"id": "1591",
+				"meta": {
+					"lastUpdated": "2021-01-07T20:46:48.000+05:30",
+					"profile": [
+						"http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"
+					]
+				},
+				"identifier": [
+					{
+						"system": "http://nationalhealthcareprovider.org/mrn",
+						"value": "MRN-12345"
+					}
+				],
+				"status": "active",
+				"intent": "order",
+				"category": [
+					{
+						"text": "inpatient"
+					}
+				],
+				"reportedBoolean": true,
+				"medicationCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+							"code": "999967",
+							"display": "amLODIPine 5 MG / Hydrochlorothiazide 12.5 MG / Olmesartan medoxomil 20 MG Oral Tablet"
+						}
+					],
+					"text": "amLODIPine 5 MG / Hydrochlorothiazide 12.5 MG / Olmesartan medoxomil 20 MG Oral Tablet"
+				},
+				"subject": {
+					"reference": "Patient/2327627"
+				},
+				"encounter": {
+					"reference": "Encounter/2472857"
+				},
+				"authoredOn": "2021-01-07T20:46:48+05:30",
+				"note": [
+					{
+						"text": "This is note test"
+					}
+				],
+				"dosageInstruction": [
+					{
+						"patientInstruction": "This patient instruction text",
+						"asNeededBoolean": true
+					}
+				]
+			},
+			"search": {
+				"mode": "match"
+			}
+		},
+		{
+			"fullUrl": "http://localhost:8089/fhir/r4/1005/Provenance/MR-1591",
+			"resource": {
+				"resourceType": "Provenance",
+				"id": "MR-1591",
+				"meta": {
+					"profile": [
+						"http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance"
+					]
+				},
+				"target": [
+					{
+						"reference": "MedicationRequest/1591"
+					}
+				],
+				"recorded": "2021-01-07T20:46:48.000+05:30",
+				"agent": [
+					{
+						"who": {
+							"reference": "Organization/001"
+						}
+					},
+					{
+						"type": {
+							"coding": [
+								{
+									"system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-provenance-participant-type",
+									"code": "transmitter",
+									"display": "Transmitter"
+								}
+							]
+						}
+					}
+				]
+			},
+			"search": {
+				"mode": "include"
+			}
+		},
+		{
+			"resource": {
+				"resourceType": "Parameters",
+				"id": "2109caea-7dbf-4e20-9b9f-0398cec34bf0",
+				"parameter": [
+					{
+						"name": "resourceType",
+						"valueString": "MedicationRequest"
+					},
+					{
+						"name": "requestId",
+						"valueString": "0efd8bdd-39ed-4b15-a46d-758e88aadc74"
+					},
+					{
+						"name": "endpointUrl",
+						"valueString": "http://localhost:8089/fhir/r4/1005"
+					},
+					{
+						"name": "practiceId",
+						"valueString": "1005"
+					},
+					{
+						"name": "patient",
+						"valueReference": {
+							"reference": "Patient/11c37192"
+						}
+					},
+					{
+						"name": "encounter",
+						"valueReference": {
+							"reference": "Encounter/123"
+						}
+					},
+					{
+						"name": "status",
+						"valueString": "active"
+					},
+					{
+						"name": "intent",
+						"valueString": "order"
+					},
+					{
+						"name": "intent",
+						"valueString": "plan"
+					}
+				]
+			}
+		}
+	]
+}

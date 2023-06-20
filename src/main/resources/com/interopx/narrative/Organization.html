@@ -1,0 +1,37 @@
+<!--/* 
+This top section is not exported as a part of the Narrative,
+it is only present so that this template can be viewed in 
+a browser. 
+-->
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="narrative.css"/>
+	</head>
+	<body>
+<!--*/-->
+
+<div>
+	<table border="1">
+		<tbody>
+			<tr th:if="${not resource.name.empty} AND  ${resource.name!=null}">
+				<td>Name</td>
+				<td><span th:text="${resource.name}"></span></td>
+			</tr>			
+			<tr th:if="${not resource.address.empty}">
+				<td>Address</td>
+				<td><div class="hapiHeaderText" th:narrative="${resource.address[0]}"/>
+				</td>
+			</tr>
+			<span th:if="${not resource.telecom.empty}">
+				<tr th:each="telecom:${resource.telecom}">
+					<td>Telecom Value</td>
+					<td><span th:text="${telecom.value}"></span></td>
+				</tr>
+			</span>
+		</tbody>
+	</table>
+</div>
+<!--/*-->
+	</body>
+</html>
+<!--*/-->

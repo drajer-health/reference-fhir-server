@@ -1,0 +1,90 @@
+{
+  "index-version": 1,
+  "files": [
+    {
+      "filename": "Organization-min.json",
+      "resourceType": "Organization",
+      "id": "min"
+    },
+    {
+      "filename": "Parameters-member-match-out.json",
+      "resourceType": "Parameters",
+      "id": "member-match-out"
+    },
+    {
+      "filename": "Task-query-status.json",
+      "resourceType": "Task",
+      "id": "query-status"
+    },
+    {
+      "filename": "PractitionerRole-full.json",
+      "resourceType": "PractitionerRole",
+      "id": "full"
+    },
+    {
+      "filename": "Practitioner-full.json",
+      "resourceType": "Practitioner",
+      "id": "full"
+    },
+    {
+      "filename": "PractitionerRole-min.json",
+      "resourceType": "PractitionerRole",
+      "id": "min"
+    },
+    {
+      "filename": "Coverage-min.json",
+      "resourceType": "Coverage",
+      "id": "min"
+    },
+    {
+      "filename": "Task-min.json",
+      "resourceType": "Task",
+      "id": "min"
+    },
+    {
+      "filename": "Task-query-complete.json",
+      "resourceType": "Task",
+      "id": "query-complete"
+    },
+    {
+      "filename": "Provenance-full.json",
+      "resourceType": "Provenance",
+      "id": "full"
+    },
+    {
+      "filename": "Provenance-min.json",
+      "resourceType": "Provenance",
+      "id": "min"
+    },
+    {
+      "filename": "Practitioner-min.json",
+      "resourceType": "Practitioner",
+      "id": "min"
+    },
+    {
+      "filename": "Task-query-initial.json",
+      "resourceType": "Task",
+      "id": "query-initial"
+    },
+    {
+      "filename": "Organization-full.json",
+      "resourceType": "Organization",
+      "id": "full"
+    },
+    {
+      "filename": "Parameters-member-match-in.json",
+      "resourceType": "Parameters",
+      "id": "member-match-in"
+    },
+    {
+      "filename": "Task-document-complete.json",
+      "resourceType": "Task",
+      "id": "document-complete"
+    },
+    {
+      "filename": "Coverage-full.json",
+      "resourceType": "Coverage",
+      "id": "full"
+    }
+  ]
+}
